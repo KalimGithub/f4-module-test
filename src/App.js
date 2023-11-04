@@ -1,9 +1,18 @@
-import React from "react"; 
+import React from "react";
+import Header from "./Components/Header";
+import Cart from "./Pages/Cart";
+import Home from "./Pages/Home"
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
-    return(
+    return (
         <div>
-        <h1>hellooo</h1>
+            <Header />
+            <Routes>
+                <Route  path="/" element={<Home/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                {/* <Cart /> */}
+            </Routes>
         </div>
     )
 }
